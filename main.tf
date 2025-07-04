@@ -35,7 +35,7 @@ module "vpc" {
 }
 
 module "security_group" {
-  source = "./modules/security_group"
+  source = "./modules/Security_Groups"
   vpc_id = module.vpc.vpc_id
 }
 

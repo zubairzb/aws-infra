@@ -36,10 +36,6 @@ resource "aws_route_table" "private_route_table" {
   }
 }
 
-lifecycle {
-  ignore_changes = [route.tags] # modify this when change is needed for this resource
-}
-
 resource "aws_route_table" "public_route_table" {
   vpc_id = aws_vpc.lg-core-reportportal-sandbox_VPC.id
 
