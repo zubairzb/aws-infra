@@ -39,14 +39,14 @@ module "security_group" {
   vpc_id = module.vpc.vpc_id
 }
 
-module "iam" {
+/* module "iam" {
   source             = "./modules/IAM"
   cluster_role_name  = var.cluster_role_name
   nodegroup_role_name = var.nodegroup_role_name
   eks_cluster        = module.eks.eks_cluster
   oidc_provider_id   = module.eks.oidc_provider_id
   aws_account_id     = module.eks.aws_account_id
-}
+} */
 
 /*module "eks" {
   source = "./modules/EKS"
