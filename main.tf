@@ -48,7 +48,7 @@ module "iam" {
   aws_account_id     = module.eks.aws_account_id
 }
 
-module "eks" {
+/*module "eks" {
   source = "./modules/EKS"
 
   cluster_name       = var.cluster_name
@@ -100,3 +100,4 @@ module "alb" {
   certificate_arn     = module.acm.acm_certificate_arn
   vpc_id              = module.vpc.vpc_id
 }
+*/
