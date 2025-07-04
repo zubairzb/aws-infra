@@ -19,21 +19,18 @@ nodegroup_role_name  = "demo-eks-node-role"
 cluster_name         = "demo-cluster"
 kubernetes_version   = "1.32"
 node_group_version   = "1.32"
+node_desired_size    = "1"
+node_min_size        = "1"
+node_max_size        = "2"
 
 # API Node Group
 api_node_group_name  = "api-node-group"
 api_node_group_new   = false
-api_node_desired_size = 1
-api_node_min_size     = 1
-api_node_max_size     = 2
 api_instance_type     = "t3.medium"
 
 # DB Node Group
 db_node_group_name   = "db-node-group"
 db_node_group_new    = false
-db_node_desired_size = 1
-db_node_min_size     = 1
-db_node_max_size     = 2
 db_instance_type     = "t3.medium"
 
 # EC2
