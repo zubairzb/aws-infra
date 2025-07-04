@@ -17,7 +17,7 @@ provider "aws" {
   region = "eu-central-1"
 }
 
-/* module "vpc" {
+module "vpc" {
   source         = "./modules/VPC"
   vpc_name       = var.vpc_name
   primary_cidr   = var.primary_cidr
@@ -37,7 +37,7 @@ provider "aws" {
 module "security_group" {
   source = "./modules/security_group"
   vpc_id = module.vpc.vpc_id
-} */
+}
 
 module "iam" {
   source             = "./modules/IAM"
@@ -48,7 +48,7 @@ module "iam" {
   aws_account_id     = module.eks.aws_account_id
 }
 
-/* module "eks" {
+module "eks" {
   source = "./modules/EKS"
 
   cluster_name       = var.cluster_name
@@ -100,4 +100,3 @@ module "alb" {
   certificate_arn     = module.acm.acm_certificate_arn
   vpc_id              = module.vpc.vpc_id
 }
-*/ 
